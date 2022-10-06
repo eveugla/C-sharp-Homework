@@ -4,3 +4,18 @@
 7 -> да
 1 -> нет
 */
+Console.Write("Введите цифру от 1 до 7, обозначающую день недели: ");
+int day = int.Parse(Console.ReadLine()!);
+
+if ((day == 1) || (day == 2) || (day == 3) || (day == 4) || (day == 5))
+{
+    Console.Write("Это не выходной день");
+}
+else if ((day == 6) || (day == 7))
+{
+    Console.Write("Это выходной день");
+}
+else
+{
+    Console.Write("Такого дня недели не существует");
+}
