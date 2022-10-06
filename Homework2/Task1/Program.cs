@@ -4,3 +4,11 @@
 782 -> 8
 918 -> 1
 */
+
+
+Console.Write("Введите трёхзначное число: ");
+int N = int.Parse(Console.ReadLine()!);
+
+int b = N / 10 % 10;
+Console.Write($"Вторая цифра числа - {b}");
+
