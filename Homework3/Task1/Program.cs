@@ -4,3 +4,19 @@
 12821 -> да
 23432 -> да
 */
+int N;
+Console.Write($"Введите число: ");
+int.TryParse(Console.ReadLine()!, out N);
+
+int a = ((N - (N % 10000)) / 10000);
+int b = (N % 10000 - N % 1000) / 1000;
+int c = N % 100;
+
+if (b * 10 + a == c)
+{
+    Console.WriteLine($"Число {N} - палиндром!");
+} 
+else
+{
+    Console.WriteLine($"Число {N} - НЕ палиндром!");
+}
