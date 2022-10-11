@@ -2,3 +2,38 @@
 /*
 [345, 897, 568, 234] -> 2
 */
+int size;
+Console.WriteLine("Введите размер массива");
+int.TryParse(Console.ReadLine()!, out size);
+
+int[] n = new int[size];
+FillArray(n); 
+PrintArray(n);
+int count = 0;
+
+for (int i = 0; i < n.Length; i++)
+if (n[i] % 2 == 0)
+count++;
+
+Console.WriteLine($"В массиве {n.Length} чисел, чётных - {count}");
+
+void FillArray(int[] _n)
+{
+    for(int i = 0; i < _n.Length; i++)
+    {
+        int a;
+        Console.Write($"Введите элемент[{i}]: ");
+        int.TryParse(Console.ReadLine()!, out a);
+        _n[i] = a;
+    }
+}
+void PrintArray(int[] _n)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < _n.Length; i++)
+    {
+        Console.Write(_n[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
