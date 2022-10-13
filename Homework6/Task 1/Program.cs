@@ -36,3 +36,80 @@ void PrintArray(int[] _n)
     }
     Console.WriteLine();
 }
+/*       Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, 
+сколько чисел больше 0 ввёл пользователь.
+0, 7, 8, -2, -2 -> 2
+1, -7, 567, 89, 223-> 3      */
+/*
+int M;
+int.TryParse(Console.ReadLine()!, out M);
+
+int k = 0;
+
+for (int i = 0; i < M; i++)
+{
+    int a;
+    int.TryParse(Console.ReadLine()!, out a);
+    if (a > 0)
+        k++;
+}
+
+Console.Write($" -> {k}");
+*/
+/*       Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, 
+сколько чисел больше 0 ввёл пользователь.
+0, 7, 8, -2, -2 -> 2
+1, -7, 567, 89, 223-> 3    
+45 5 2, 6, 3, 4 5 6 --9 878 -> 9  */
+/*
+List<string> list = new List<string>();
+
+string user = Console.ReadLine()!;
+user += " ";
+string temp = "";
+
+for (int i = 0; i < user.Length; i++)
+{
+    if (user[i] == '-' && IsDigit(user[i + 1]) && i < user.Length - 1)
+    {
+        if (temp != "")
+        {
+            list.Add(temp);
+            temp = "-";
+        }
+        else
+            temp = "-";
+    }
+    else if (IsDigit(user[i]))
+    {
+        temp += user[i];
+    }
+    else
+    {
+        if (temp != "")
+        {
+            list.Add(temp);
+            temp = "";
+        }
+    }
+}
+
+int k = 0;
+
+foreach (var item in list)
+{
+    if (int.Parse(item) > 0)
+        k++;
+}
+
+
+foreach (var item in list)
+    Console.Write($"{item} ");
+Console.Write($"-> {k}");
+
+bool IsDigit(char _ch)
+{
+    if (_ch >= '0' && _ch <= '9')
+        return true;
+    return false;
+*/
