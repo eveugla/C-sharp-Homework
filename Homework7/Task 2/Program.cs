@@ -7,3 +7,37 @@
 8 4 2 4
 17 -> такого числа в массиве нет
 */
+int m, n;
+
+Console.Write($"Введите количество строк m: ");
+int.TryParse(Console.ReadLine()!, out m);
+Console.Write($"Введите количество столбцов n: ");
+int.TryParse(Console.ReadLine()!, out n);
+
+int[,] array = new int[m, n];
+{ 
+    for (int i = 0; i < m; i++)
+    { 
+        for (int j = 0; j < n; j++)
+        { 
+            array[i,j] = new Random().Next(-10, 10);
+            Console.Write($"{array[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int a, b;
+
+Console.Write($"Введите координату a: ");
+int.TryParse(Console.ReadLine()!, out a);
+Console.Write($"Введите координату b: ");
+int.TryParse(Console.ReadLine()!, out b);
+
+if (a > m && b > n)
+    Console.WriteLine("Такого числа в массиве нет.");
+else
+{
+    int num = array[a, b];
+    Console.WriteLine("Число: " + num);
+}
