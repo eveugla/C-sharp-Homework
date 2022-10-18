@@ -41,3 +41,29 @@ void FillArray(int[,,] arr)
         }
     }
 }
+/*
+int[,,] array = new int[5, 5, 4];
+
+List<int> nums = new List<int>();
+
+for (int i = 0; i < 90; i++)
+    nums.Add(i + 10);
+
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        for (int k = 0; k < array.GetLength(2); k++)
+        {
+            if (nums.Count == 0)
+                array[i, j, k] = 0;
+            else
+            {
+                int temp = new Random().Next(nums.Count);
+                array[i, j, k] = nums[temp];
+                nums.RemoveAt(temp);
+            }
+        }
+    }
+}
+*/

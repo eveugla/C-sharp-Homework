@@ -69,4 +69,48 @@ void PrintArray(int[,] array)
         }
         Console.WriteLine();
     }
+}/*Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Например, даны 2 матрицы:
+2 4 | 3 4
+3 2 | 3 3
+Результирующая матрица будет:
+18 20
+15 18           */
+/*
+int[,] A = new int[2,2]
+{
+    {2, 4 },
+    {3 , 2}
+};
+int[,] B = new int[2, 2]
+{
+    {3, 4 },
+    {3 , 3}
+};
+
+if (A.GetLength(1) != B.GetLength(0))
+{
+    Console.Write($"Произведение матриц невозможно из-за несоответветствия размеров");
+    return;
 }
+
+int[,] C = new int[A.GetLength(0), B.GetLength(1)];
+
+for (int i = 0; i < C.GetLength(0); i++)
+{
+    for (int j = 0; j < C.GetLength(1); j++)
+    {
+        for (int k = 0; k < A.GetLength(1); k++)
+        {
+            C[i, j] += A[i, k] * B[k, j];
+        }
+    }
+}
+
+for (int i = 0; i < C.GetLength(0); i++)
+{
+    for (int j = 0; j < C.GetLength(1); j++)
+        Console.Write($"{C[i, j]} ");
+    Console.WriteLine();
+}
+*/

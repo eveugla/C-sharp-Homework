@@ -63,3 +63,24 @@ void PrintArray(int[,] array)
         Console.WriteLine("");
     }
 }
+/*
+for (int i = 0; i < array.GetLength(0); i++) // Переключение между строками
+{
+    for (int k = 0; k < array.GetLength(1) - 1; k++) // Количество повторов сортировки
+    {
+        int count = 0;
+        for (int j = 0; j < array.GetLength(1) - 1; j++)
+        {
+            if (array[i, j] < array[i, j + 1])
+            {
+                count++;
+                int temp = array[i, j];
+                array[i, j] = array[i, j + 1];
+                array[i, j + 1] = temp;
+            }
+        }
+        if (count == 0)
+            break;
+    }
+}
+*/

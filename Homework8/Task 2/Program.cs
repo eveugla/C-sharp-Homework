@@ -58,3 +58,21 @@ void PrintArray(int[,] array)
         Console.WriteLine("");
     }
 }
+/*
+int k = 0, sum = 0;
+for (int j = 0; j < array.GetLength(1); j++)
+    sum += array[0, j];
+
+for (int i = 1; i < array.GetLength(0); i++)
+{
+    int tsum = 0;
+    for (int j = 0; j < array.GetLength(1); j++)
+        tsum  += array[i, j];
+    if (tsum < sum)
+    {
+        sum = tsum;
+        k = i;
+    }
+}
+Console.Write($"строка {k}, sum = {sum}");
+*/
